@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2020 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="79.1459in" height="52.7768in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 364220.08 242872.93"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID0" horiz-adv-x="667" font-variant="normal" style="fill-rule:nonzero" font-weight="400">
+	<font-face 
+		font-family="Arial">
+		<font-face-src>
+			<font-face-name name="Arial"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="∫" horiz-adv-x="273" d="M98.0001 463l7.99985 259.5c3.00005,49.8334 11.1668,91.1668 24.5,124 8.83346,21.1666 21.1668,37 36.6667,47.6666 15.5001,10.5001 30.6668,15.8334 45.5001,15.8334 16.3333,0 30.6666,-5.50005 42.8333,-16.3333 12.3333,-11.0001 18.4999,-22.8334 18.4999,-35.8335 0,-15.3332 -4.33329,-27.6665 -12.9999,-36.9998 -8.66678,-9.16683 -19.3333,-13.8335 -32.1667,-13.8335 -11.3333,0 -23.8333,5.83342 -37.1667,17.3334 -7.50002,6.50014 -14.1666,9.66666 -19.6667,9.66666 -5.66653,0 -10.4999,-2.33332 -14.3333,-6.99997 -3.83325,-4.66665 -5.66653,-12.6667 -5.66653,-24 0,-13.6666 1.49992,-37.1667 4.49997,-70.6667 12.3333,-133.667 18.4999,-241.833 18.4999,-324.833 0,-21.8335 -2.66669,-117.5 -8.00006,-287 -2.66669,-95.9999 -17.3334,-161 -44,-194.833 -17.4998,-21.8333 -39.3332,-32.6668 -65.3333,-32.6668 -17,0 -30.8333,5.50005 -41.5,16.5 -10.8332,11.0001 -16.1666,25.1667 -16.1666,42.3334 0,14.6667 4.16661,26.3333 12.5,34.9999 8.33321,8.83346 18.8333,13.1668 31.5,13.1668 13.0001,0 24.1667,-5.16669 33.5,-15.5001 9.49998,-10.3332 17.3334,-15.4999 23.8333,-15.4999 5.33337,0 9.83334,2.33332 13.3334,6.83329 3.49988,4.49997 5.33337,12.1667 5.33337,22.8334 0,13.4999 -1.50013,33.1666 -4.3335,58.5 -11.8333,102.5 -17.6665,237.833 -17.6665,405.833z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Arial";font-variant:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .str1 {stroke:#D2D6CE;stroke-width:2556.6;stroke-miterlimit:2.61313}
+    .str2 {stroke:#D2D6CE;stroke-width:1278.31;stroke-miterlimit:2.61313}
+    .str0 {stroke:#E6E7E8;stroke-width:31.96;stroke-miterlimit:2.61313}
+    .fil1 {fill:none}
+    .fil0 {fill:#96989A}
+    .fil3 {fill:#84716B}
+    .fil2 {fill:#D2D6CE}
+    .fnt0 {font-weight:normal;font-size:87283.42px;font-family:'Arial'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2680818798352">
+   <g>
+    <g>
+     <rect class="fil0 str0" x="15.98" y="15.98" width="364188.12" height="242813.36"/>
+     <g>
+      <ellipse class="fil1 str1" cx="194765.1" cy="138508.19" rx="10848.77" ry="10751.9"/>
+      <polyline class="fil1 str2" points="181411.81,133062.96 183916.32,138508.19 188612.82,135028.19 "/>
+      <g transform="matrix(0.971989 0.235028 -0.235028 0.971989 83656.8 377629)">
+       <text x="39572.93" y="-223507.12"  class="fil2 fnt0">∫</text>
+      </g>
+     </g>
+     <line class="fil1 str0" x1="246114.04" y1="556.68" x2="246114.04" y2= "175251.97" />
+     <line class="fil1 str0" x1="35233.33" y1="15.98" x2="35233.33" y2= "242829.34" />
+     <line class="fil1 str0" x1="85470.58" y1="15.98" x2="85470.58" y2= "242829.34" />
+     <line class="fil1 str0" x1="128421.4" y1="15.98" x2="128421.4" y2= "242829.34" />
+     <line class="fil1 str0" x1="171372.22" y1="15.98" x2="171372.22" y2= "242829.34" />
+     <line class="fil1 str0" x1="214323.06" y1="15.98" x2="214323.06" y2= "242829.34" />
+     <line class="fil1 str0" x1="364204.12" y1="186074.83" x2="15.96" y2= "186074.83" />
+     <line class="fil1 str0" x1="364204.1" y1="175251.97" x2="214323.04" y2= "175251.97" />
+     <line class="fil1 str0" x1="251905.11" y1="556.68" x2="251905.11" y2= "175251.97" />
+     <line class="fil1 str0" x1="257696.18" y1="556.68" x2="257696.18" y2= "175251.97" />
+     <line class="fil1 str0" x1="263487.25" y1="556.68" x2="263487.25" y2= "175251.97" />
+     <line class="fil1 str0" x1="269278.33" y1="556.68" x2="269278.33" y2= "175251.97" />
+     <line class="fil1 str0" x1="275069.4" y1="556.68" x2="275069.4" y2= "175251.97" />
+     <rect class="fil0 str0" x="15.98" y="15.98" width="171356.25" height="83569.71"/>
+    </g>
+    <path class="fil1 str0" d="M15.98 242829.34c213414.57,1924.66 356349.21,-59617.67 364188.12,-242813.36"/>
+   </g>
+   <path class="fil3" d="M282042.83 175251.97l82161.27 0 0 -175235.99c-3422.84,79991.75 -32603.03,136789.06 -82161.27,175235.99z"/>
+   <path class="fil3" d="M364204.12 186074.83l-97380.37 0c-15813.49,10307.04 -33359.98,19053.54 -52500.69,26364.43l0 30390.08 149881.04 0 0.02 -56754.52z"/>
+   <path class="fil3" d="M171372.22 242829.34l0 -16989.29c-13710.84,3435.05 -28040.08,6313.24 -42950.82,8667.79l0 8321.49 42950.82 0z"/>
+  </g>
+ </g>
+</svg>
