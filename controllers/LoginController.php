@@ -15,11 +15,11 @@ class LoginController {
             if (empty($errores)) {
                 $res = $auth->checkExistence();
                 if (!$res) {
-                    $errores = Admin::getErrors();
+                    $errores = Admin::getErrores();
                 } else {
                     $res = $auth->checkPass($res);
                     if (!$res) {
-                        $errores = Admin::getErrors();
+                        $errores = Admin::getErrores();
                     } else {
                         //Autenticar!!!
                         $auth->logUser();

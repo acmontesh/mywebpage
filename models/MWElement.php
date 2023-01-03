@@ -114,6 +114,10 @@ class MWElement {
         return self::$errores;
     }
 
+    public static function getErrores(){
+        return self::$errores;
+    }
+
     public function validate(String $crudAction="create", $files_array=null) {
         //Validation for empty fields
         self::$errores = $this->checkEmptyFields($this->valuesArray, $crudAction);
