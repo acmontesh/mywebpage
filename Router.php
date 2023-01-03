@@ -22,7 +22,12 @@ class Router {
         $protectedRoutes = ['/admin', '/projects/crear', 
         '/projects/actualizar', '/projects/eliminar'];
 
-        $urlCurrent     = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
+        if (isset($_SERVER['PATH_INFO'])) {
+            $urlCurrent = $_SERVER['PATH_INFO'] ?? '/';
+        } else {
+            $urlCurrent = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
+        }
+
         $method         = $_SERVER['REQUEST_METHOD'];
 
         if ($method==='GET') {
