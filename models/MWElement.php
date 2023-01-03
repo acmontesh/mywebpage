@@ -62,15 +62,15 @@ class MWElement {
             $this->valuesArray[static::$imgFieldName] = $imageName;   
 
             //Creates the image object, crops and resize
-            //$img = Image::make($filesArray[static::$imgFieldName]['tmp_name'])->fit(800, 600);
+            $img = Image::make($filesArray[static::$imgFieldName]['tmp_name'])->fit(800, 600);
             
             //Moves image from memory to disk
-            //$img->save($folderFiles . $imageName);
+            $img->save($folderFiles . $imageName);
             
             //Frees memory
-            //$img->destroy();
+            $img->destroy();
 
-            move_uploaded_file($filesArray[$this->imgFieldName]['tmp_name'], $folderFiles . $imageName);
+            //move_uploaded_file($filesArray[$this->imgFieldName]['tmp_name'], $folderFiles . $imageName);
 
             //If we are updating a file, need to delete previous file from the server.
             if ($crudAction === "update") {
