@@ -1,5 +1,6 @@
 <main>
     <h1>Curriculum Vitae</h1>
+    <div class="goback">
     <p>This page is currently being updated. In the meantime, please find my CV at: </p>
     <a href="https://www.linkedin.com/in/abraham-montes-humanez-6661a841/">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="56" height="56" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -11,6 +12,7 @@
             <path d="M16 16v-3a2 2 0 0 0 -4 0" />
         </svg>
     </a>
+    </div>
 
     <div class="goback">
         <a href="/" class="boton", id="back">Go Back</a>
