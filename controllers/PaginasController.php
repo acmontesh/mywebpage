@@ -63,20 +63,20 @@ class PaginasController {
             $mail = new PHPMailer();
             //Set SMTP: Protocol for mail sending 
             $mail->isSMTP();
-            $mail->Host = 'smtp.mailtrap.io';
+            $mail->Host = 'smtp.titan.email';
             $mail->SMTPAuth = true;
-            $mail->Username = '6f964bb658a372';
-            $mail->Password = '817a8875be2ca7';
+            $mail->Username = 'admin@abraham-montes.com';
+            $mail->Password = 'TexasUSA2022!';
             $mail->SMTPSecure = 'tls'; //Transport layer security
             //tls replaces SSL (Secure socket layer).
             //Avoids interception of email
-            $mail->Port = 2525;
+            $mail->Port = 465;
 
 
             //Set Email Content
             //**** Header */
             $mail->setFrom('admin@abraham-montes.com');
-            $mail->addAddress('acmontesh@gmail.com', 'Abraham-Montes.com');
+            $mail->addAddress('admin@abraham-montes.com', 'Abraham-Montes.com');
             $mail->Subject = 'New Message from Abraham-Montes.com';
             $mail->isHTML(true);
             $mail->CharSet = 'UTF-8';
