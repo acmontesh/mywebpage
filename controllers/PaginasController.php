@@ -63,14 +63,15 @@ class PaginasController {
             $mail = new PHPMailer();
             //Set SMTP: Protocol for mail sending 
             $mail->isSMTP();
-            $mail->Host = 'smtp.titan.email';
+            $mail->SMTPDebug = 2;
+            $mail->Host = 'smtp.hostinger.com';
             $mail->SMTPAuth = true;
             $mail->Username = 'admin@abraham-montes.com';
             $mail->Password = 'p3n$aK0lI3';
             $mail->SMTPSecure = 'tls'; //Transport layer security
             //tls replaces SSL (Secure socket layer).
             //Avoids interception of email
-            $mail->Port = 465;
+            $mail->Port = 587;
 
 
             //Set Email Content
