@@ -67,7 +67,7 @@ class PaginasController {
             $mail->Host = 'smtp.titan.email';
             $mail->SMTPAuth = true;
             $mail->Username = 'admin@abraham-montes.com';
-            $mail->Password = 'p3n$aK0lI3';
+            $mail->Password = $_ENV['ML_PASS'];
             $mail->SMTPSecure = 'ssl'; //Transport layer security
             //tls replaces SSL (Secure socket layer).
             //Avoids interception of email
