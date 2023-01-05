@@ -51,7 +51,7 @@ class MWElement {
         if (static::$imgObj && !empty($filesArray[static::$imgFieldName]["name"])) {
 
             //Create folder for images files
-            $folderFiles = $_SERVER['DOCUMENT_ROOT'] . '/images/';
+            $folderFiles = '/images/';
             if (!is_dir($folderFiles)) {
                 mkdir($folderFiles);
             }
@@ -69,6 +69,8 @@ class MWElement {
             
             //Frees memory
             $img->destroy();
+
+            debugChunk($_SERVER['DOCUMENT_ROOT']);
 
             //move_uploaded_file($filesArray[$this->imgFieldName]['tmp_name'], $folderFiles . $imageName);
 
