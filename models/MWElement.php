@@ -51,12 +51,11 @@ class MWElement {
         if (static::$imgObj && !empty($filesArray[static::$imgFieldName]["name"])) {
 
             //Create folder for images files
-            $folderFiles = $_SERVER['DOCUMENT_ROOT'] . '/images/';
+            $folderFiles = $_SERVER['DOCUMENT_ROOT'] . '/public/images/';
             if (!is_dir($folderFiles)) {
                 mkdir($folderFiles);
             }
 
-            debugChunk($_SERVER['DOCUMENT_ROOT']);
 
             //Creates the name of the image to be uploaded
             $imageName = md5(uniqid( rand(), true )) . ".jpg";
@@ -85,7 +84,7 @@ class MWElement {
         if (static::$txtObj && !empty($filesArray[$this->txtFieldName]["name"])) {
 
             //Create folder for txt files
-            $folderFiles = $_SERVER['DOCUMENT_ROOT'] . '/texts/';
+            $folderFiles = $_SERVER['DOCUMENT_ROOT'] . '/public/texts/';
             if (!is_dir($folderFiles)) {
                 mkdir($folderFiles);
             }
