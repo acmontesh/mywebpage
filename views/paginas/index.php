@@ -19,13 +19,13 @@ use function Model\includeInfoMain;
                 </p>
             </div> 
 
-            <nav class="navegacion show-on-click">    
+            <div class="navegacion show-on-click">    
                 <a class="menu-item" id="menu-about-me">About Me</a>
                 <a class="menu-item" id="menu-research">My Research</a>
                 <a class="menu-item" id="menu-blog">Blog</a>
                 <a class="menu-item" id="menu-quotes">Quotes I Like</a>
                 <a class="menu-item" id="menu-contact">Contact</a>        
-            </nav>
+            </div>
 
             <div class="hamburguesa show-on-scroll">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="3" stroke="#d6c97c" fill="none" stroke-linecap="round" stroke-linejoin="round">

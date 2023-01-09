@@ -14,6 +14,17 @@ if(!isset($inicio)) {
     <link rel="stylesheet" href="../build/css/app.css">
                                         
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DVFP354CG0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DVFP354CG0');
+</script>
+
 <body>
     <header class="<?php echo $inicio ? 'main-header' : 'second-header'; ?>">
         <div class="<?php echo $inicio ? 'contenedor-header' : 'contenedor-header-generico' ?>">
