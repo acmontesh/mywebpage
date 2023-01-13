@@ -14,7 +14,7 @@ use function Model\includeInfoMain;
                     <img src="build/img/fotofinal.png" alt="fotofinal">
                 </picture>
                 <p>
-                    <span>Welcome!</span><br> I am Abraham: An engineering researcher, Ph.D. 
+                    <span>Welcome!</span><br> I am Abraham. Engineering researcher, Ph.D. 
                     student and statistics and web development enthusiast. Please find below some highlights from my CV.              
                 </p>
             </div> 
