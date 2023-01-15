@@ -12,10 +12,17 @@ if(!isset($inicio)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Abraham Montes-Humanez</title>
     <meta name="description" content="PhD student and Drilling automation researcher" />
-    <meta property="og:title" content="Abraham Montes, Drilling automation researcher at UT Austin" />
+    <meta property="og:title" content="Abraham Montes" />
     <meta property="og:url" content="https://www.abraham-montes.com/" />
     <meta property="og:description" content="Abraham Montes, Drilling automation researcher at UT Austin" />
-    <meta property="og:image" content="../build/img/mifoto.webp" />
+    <meta property="og:image" content="../build/img/backimage.webp" />
+
+    <meta name="twitter:card" content="../build/img/backimage.webp" />
+    <meta name="twitter:title" content="Abraham Montes">
+    <meta name="twitter:description" content="Abraham Montes, Drilling automation researcher at UT Austin">
+    <meta name="twitter:image" content="../build/img/mifoto.webp">
+    <meta name="twitter:domain" content="https://www.abraham-montes.com">
+
     <link rel="stylesheet" href="../build/css/app.css">
     <link rel="shortcut icon" href="../images/icon.png">
                                         
