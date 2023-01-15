@@ -15,7 +15,7 @@ if(!isset($inicio)) {
     <meta property="og:title" content="Abraham Montes, Drilling automation researcher at UT Austin" />
     <meta property="og:url" content="https://www.abraham-montes.com/" />
     <meta property="og:description" content="Abraham Montes, Drilling automation researcher at UT Austin" />
-    <meta property="og:image" content="../build/img/fotofinal.webp" />
+    <meta property="og:image" content="../build/img/mifoto.webp" />
     <link rel="stylesheet" href="../build/css/app.css">
     <link rel="shortcut icon" href="../images/icon.png">
                                         
