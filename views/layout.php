@@ -17,7 +17,7 @@ if(!isset($inicio)) {
     <meta property="og:description" content="Abraham Montes, Drilling automation researcher at UT Austin" />
     <meta property="og:image" content="../build/img/backimage.webp" />
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Abraham Montes">
     <meta name="twitter:description" content="Abraham Montes, Drilling automation researcher at UT Austin">
     <meta name="twitter:image" content="../build/img/mifoto.webp">
