@@ -20,7 +20,7 @@ if(!isset($inicio)) {
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Abraham Montes">
     <meta name="twitter:description" content="Drilling automation researcher at The University of Texas at Austin">
-    <meta name="twitter:image" content="../build/img/mifoto.webp">
+    <meta name="twitter:image" content="../build/img/fotofinal.webp">
     <meta name="twitter:domain" content="https://www.abraham-montes.com">
 
     <link rel="stylesheet" href="../build/css/app.css">
