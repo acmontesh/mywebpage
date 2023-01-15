@@ -12,6 +12,7 @@ if(!isset($inicio)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Abraham Montes-Humanez</title>
     <link rel="stylesheet" href="../build/css/app.css">
+    <link rel="shortcut icon" href="../images/icon.png">
                                         
 </head>
 
