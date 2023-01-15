@@ -11,6 +11,11 @@ if(!isset($inicio)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Abraham Montes-Humanez</title>
+    <meta name="description" content="PhD student and Drilling automation researcher" />
+    <meta property="og:title" content="Abraham Montes, Drilling automation researcher at UT Austin" />
+    <meta property="og:url" content="https://www.abraham-montes.com/" />
+    <meta property="og:description" content="Abraham Montes, Drilling automation researcher at UT Austin" />
+    <meta property="og:image" content="../build/img/fotofinal.webp" />
     <link rel="stylesheet" href="../build/css/app.css">
     <link rel="shortcut icon" href="../images/icon.png">
                                         
