@@ -14,12 +14,12 @@ if(!isset($inicio)) {
     <meta name="description" content="PhD student and Drilling automation researcher" />
     <meta property="og:title" content="Abraham Montes" />
     <meta property="og:url" content="https://www.abraham-montes.com/" />
-    <meta property="og:description" content="Abraham Montes, Drilling automation researcher at UT Austin" />
+    <meta property="og:description" content="Drilling automation researcher at The University of Texas at Austin" />
     <meta property="og:image" content="../build/img/backimage.webp" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Abraham Montes">
-    <meta name="twitter:description" content="Abraham Montes, Drilling automation researcher at UT Austin">
+    <meta name="twitter:description" content="Drilling automation researcher at The University of Texas at Austin">
     <meta name="twitter:image" content="../build/img/mifoto.webp">
     <meta name="twitter:domain" content="https://www.abraham-montes.com">
 
