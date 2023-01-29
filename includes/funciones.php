@@ -203,6 +203,8 @@ function includeInfoMain( $displayType, $results ) {
                 $headline = $bg->valuesArray["headline_blog"];
                 $imagen = $bg->valuesArray["imagen_blog"];
                 $coauthor = $bg->valuesArray["coauthors_blog"];
+                $likes_blog = $bg->valuesArray["likes_blog"];
+                $ttr = $bg->valuesArray["ttr_blog"];
                 $tempRes = Contributor::findRecord($coauthor);
                 $coauthor = $tempRes->valuesArray['name_contributor'];
                 if ($coauthor!=="no") {
@@ -214,8 +216,18 @@ function includeInfoMain( $displayType, $results ) {
                 echo <<<BLOG
                     <div class="enclosed-box blog-entry">
                         <h2>$title</h2>
-                        <div class="entry">                            
-                            <p class="title-entry"><span>Abraham Montes $coauthor | </span> 2022</p>
+                        <div class="bar-blog"></div>
+                        <div class="entry"> 
+                            <div class="head-espaciado">                           
+                                <p class="title-entry"><span>Author(s): </span> Abraham Montes $coauthor | 2022</p>
+                                <p class="title-entry"><span>Time to read : </span> $ttr min</p>
+                                <div class="likes-count full">
+                                    <div id="likes-count-child">
+                                        <p>$likes_blog</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <br>
                             <div class="contenido-entry">
                                 <picture>

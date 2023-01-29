@@ -45,12 +45,24 @@ class PaginasController {
     }  
 
     public static function article( Router $router) {
+        
         $artNumber = getArticleNumber();
         $instance = Blog::findRecord($artNumber);
+        $heart = ""; 
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $instance = $instance->syncUpdate($_POST);
+            $errorMessages = $instance->validate_commit("update", null, $artNumber, "likes");            
+            $heart = "full";
+        }
+        
         
         $router->render('paginas/article',[  
-            'instance'=>$instance          
+            'instance'=>$instance,
+            'heart'=>$heart           
         ]);
+        //Case user gives like
+
+        
     }  
 
     public static function sent(Router $router) {

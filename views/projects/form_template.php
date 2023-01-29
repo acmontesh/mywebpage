@@ -79,7 +79,7 @@ use function Model\debugChunk;
                 $txt = $instance->valuesArray['article_blog'];
                 echo "<h3>Article Preview</h3>";
                 echo "<textarea class='article-preview' readonly>";
-                $lines = file("../../texts/$txt"); 
+                $lines = file("../public/texts/$txt"); 
                 foreach ($lines as $line_num => $line) {
                     echo htmlspecialchars($line) . "\n";
                 }
@@ -110,6 +110,10 @@ use function Model\debugChunk;
                 
                 ?>
             </select>
+
+            <label for="ttr_blog">Time to Read</label>
+            <input type="number" name="ttr_blog" id="ttr_blog" placeholder="Time to read in minutes"
+                value="<?php echo isset($instance->valuesArray['ttr_blog']) ? s($instance->valuesArray['ttr_blog']) : '' ?>"/>
 
             <input type="hidden" name="form_name" value="blog">
 

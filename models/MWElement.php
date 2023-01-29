@@ -33,17 +33,17 @@ class MWElement {
         return static::$tn;
     }    
 
-    public function validate_commit(String $crudAction="create", $filesArray=null, $id=null) {
+    public function validate_commit(String $crudAction="create", $filesArray=null, $id=null, $likes=null) {
         self::$errores =    $this->validate($crudAction, $filesArray);
         
         if (empty(self::$errores)) {
-            $this->commit($filesArray, $crudAction, $this->prevFileNameImg, $this->prevFileNameTxt, $id);
+            $this->commit($filesArray, $crudAction, $this->prevFileNameImg, $this->prevFileNameTxt, $id, $likes);
         } else{
             return self::$errores;
-        }
+        }   
     }
 
-    public function commit($filesArray=null, String $crudAction="create", String $prevFileNameImg=null, String $prevFileNameTxt=null, $id=null) {
+    public function commit($filesArray=null, String $crudAction="create", String $prevFileNameImg=null, String $prevFileNameTxt=null, $id=null, $likes=null) {
         //Sanitize the inputs
         $this->valuesArray = $this->sanitize($this->valuesArray);
         
@@ -51,7 +51,7 @@ class MWElement {
         if (static::$imgObj && !empty($filesArray[static::$imgFieldName]["name"])) {
 
             //Create folder for images files
-            $folderFiles = $_SERVER['DOCUMENT_ROOT'] . '/public/images/';
+            $folderFiles = $_SERVER['DOCUMENT_ROOT'] . '/images/';
             if (!is_dir($folderFiles)) {
                 mkdir($folderFiles);
             }
@@ -81,10 +81,10 @@ class MWElement {
             
         }
 
-        if (static::$txtObj && !empty($filesArray[$this->txtFieldName]["name"])) {
+        if (static::$txtObj && !empty($filesArray[static::$txtFieldName]["name"])) {
 
             //Create folder for txt files
-            $folderFiles = $_SERVER['DOCUMENT_ROOT'] . '/public/texts/';
+            $folderFiles = $_SERVER['DOCUMENT_ROOT'] . '/texts/';
             if (!is_dir($folderFiles)) {
                 mkdir($folderFiles);
             }
@@ -94,10 +94,10 @@ class MWElement {
 
             
             //Includes the image name into the valuesArray to be inserted to the DB
-            $this->valuesArray[$this->txtFieldName] = $txtName;   
+            $this->valuesArray[static::$txtFieldName] = $txtName;   
 
             //Moves the file from memory to disk. 
-            move_uploaded_file($filesArray[$this->txtFieldName]['tmp_name'], $folderFiles . $txtName);
+            move_uploaded_file($filesArray[static::$txtFieldName]['tmp_name'], $folderFiles . $txtName);
 
             //If we are updating a file, need to delete previous file from the server.
             if ($crudAction === "update") {
@@ -108,7 +108,7 @@ class MWElement {
         if ($crudAction === "create") {
             $this->insertarDB(self::$db, static::$tn, $this->valuesArray);
         } elseif ($crudAction === "update") {
-            $this->updateDB(self::$db, static::$tn, $this->valuesArray, $id);
+            $this->updateDB(self::$db, static::$tn, $this->valuesArray, $id, $likes);
         }
         
     }
@@ -162,7 +162,7 @@ class MWElement {
         }
     }
 
-    private function updateDB($dbInstance, String $tableName, $values, $id) {
+    private function updateDB($dbInstance, String $tableName, $values, $id, $likes=null) {
         $query = "UPDATE ${tableName} SET ";
         foreach ($values as $key=>$val) {
             $query = $query . "${key}='${val}',";
@@ -170,8 +170,9 @@ class MWElement {
         $query = substr($query,0,-1) . " WHERE ${tableName}.id = $id";
         $result = $dbInstance->query($query);
         if($result){
+            if(!$likes) {
             //Redirect User:
-            header("Location: /admin?upd=1"); //Only works if there is no previous HTML
+            header("Location: /admin?upd=1");} //Only works if there is no previous HTML
         }
     }
 
@@ -190,7 +191,7 @@ class MWElement {
     }
 
 
-    private function fileValidate(array $errorsArray, array $fileArray, String $type="image", String $crudAction="create") {
+    private function fileValidate(array $errorsArray, $fileArray, String $type="image", String $crudAction="create") {
         $buffer = $errorsArray;
         if (!$fileArray || !$fileArray[static::$imgFieldName]['name'] || $fileArray[static::$imgFieldName]['error']) {
             if ($crudAction === "create") {
@@ -202,7 +203,7 @@ class MWElement {
                     $buffer[] = "Image is too large. Must be smaller than 5 MB";
                 }
             } else {
-                if ($fileArray[$this->txtFieldName]['size'] > $this->allowable_text_size) {
+                if ($fileArray[static::$txtFieldName]['size'] > $this->allowable_text_size) {
                     $buffer[] = "File is too large. Must be smaller than 1 mb";
                 }
             }
@@ -265,7 +266,7 @@ class MWElement {
 
         if (static::$txtObj) {
             $obj->valuesArray[static::$txtFieldName] = $this->valuesArray[static::$txtFieldName];
-            $obj->prevFileNameImg = $this->valuesArray[static::$txtFieldName];
+            $obj->prevFileNameTxt = $this->valuesArray[static::$txtFieldName];
         }
         return $obj;
     }

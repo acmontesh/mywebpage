@@ -17,8 +17,10 @@ $router->get('/projects/eliminar', [ProjectController::class, 'eliminar']);
 $router->get('/', [PaginasController::class, 'index']);
 $router->get('/curriculum', [PaginasController::class, 'curriculum']);
 $router->get('/article', [PaginasController::class, 'article']);
+$router->post('/article', [PaginasController::class, 'article']);
 $router->get('/sent', [PaginasController::class, 'sent']);
 $router->post('/', [PaginasController::class, 'contact']);
+
 
 $router->get('/login', [LoginController::class, 'login']);
 $router->post('/login', [LoginController::class, 'login']);

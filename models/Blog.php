@@ -13,6 +13,9 @@ public function __construct($argsPost=[]) {
     $this->valuesArray["title_blog"]            = $argsPost['title_blog'] ?? '';
     $this->valuesArray["headline_blog"]         = $argsPost['headline_blog'] ?? '';
     $this->valuesArray["coauthors_blog"]        = $argsPost['coauthors_blog'] ?? '';
+    $this->valuesArray["date_blog"]             = $argsPost['date_blog'] ?? date("F d, Y");
+    $this->valuesArray["ttr_blog"]              = $argsPost['ttr_blog'] ?? '';
+    $this->valuesArray["likes_blog"]            = $argsPost['likes_blog'] ?? 1;
     
 }   
 
