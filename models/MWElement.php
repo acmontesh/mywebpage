@@ -51,7 +51,7 @@ class MWElement {
         if (static::$imgObj && !empty($filesArray[static::$imgFieldName]["name"])) {
 
             //Create folder for images files
-            $folderFiles = $_SERVER['DOCUMENT_ROOT'] . '/images/';
+            $folderFiles = $_SERVER['DOCUMENT_ROOT'] . '/public/images/';
             if (!is_dir($folderFiles)) {
                 mkdir($folderFiles);
             }
@@ -84,7 +84,7 @@ class MWElement {
         if (static::$txtObj && !empty($filesArray[static::$txtFieldName]["name"])) {
 
             //Create folder for txt files
-            $folderFiles = $_SERVER['DOCUMENT_ROOT'] . '/texts/';
+            $folderFiles = $_SERVER['DOCUMENT_ROOT'] . '/public/texts/';
             if (!is_dir($folderFiles)) {
                 mkdir($folderFiles);
             }
