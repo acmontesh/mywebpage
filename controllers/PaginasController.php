@@ -60,7 +60,7 @@ class PaginasController {
             'instance'=>$instance,
             'heart'=>$heart,
             'artNumber'=>$artNumber           
-        ]);
+        ], true);
         //Case user gives like
 
         

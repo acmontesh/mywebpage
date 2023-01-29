@@ -50,7 +50,7 @@ class Router {
         }
     }
 
-    public function render($view, Array $datos) {
+    public function render($view, Array $datos, $uniqueTag=false) {
         foreach ($datos as $key=>$val):
             $$key = $val;
         endforeach;

@@ -11,6 +11,8 @@ if(!isset($inicio)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Abraham Montes-Humanez</title>
+    <?php
+    if(!$uniqueTag) { ?>
     <meta name="description" content="PhD student and Drilling automation researcher" />
     <meta property="og:title" content="Abraham Montes" />
     <meta property="og:url" content="https://www.abraham-montes.com/" />
@@ -22,7 +24,19 @@ if(!isset($inicio)) {
     <meta name="twitter:description" content="Drilling automation researcher at The University of Texas at Austin">
     <meta name="twitter:image" content="../build/img/backimage.webp">
     <meta name="twitter:domain" content="https://www.abraham-montes.com">
+    <?php } else { ?>
+    <meta name="description" content="Abraham's Blog Entry" />
+    <meta property="og:title" content="<?php echo $instance->valuesArray["title_blog"] ?>" />
+    <meta property="og:url" content="https://www.abraham-montes.com/articles?an=<?php echo $artNumber ?>" />
+    <meta property="og:image" content="/images/<?php echo $instance->valuesArray["imagen_blog"] ?>" />
 
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="<?php echo $instance->valuesArray["title_blog"] ?>">
+    <meta name="twitter:description" content="Blog's Entry">
+    <meta name="twitter:image" content="/images/<?php echo $instance->valuesArray["imagen_blog"] ?>">
+    <meta name="twitter:domain" content="https://www.abraham-montes.com/articles?an=<?php echo $artNumber ?>">
+
+    <?php } ?>
     <link rel="stylesheet" href="../build/css/app.css">
     <link rel="shortcut icon" href="../images/icon.png">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
