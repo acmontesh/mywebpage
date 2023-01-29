@@ -64,7 +64,7 @@ use function Model\debugChunk;
     <div class="<?php echo $pform==='create' ? 'contenido-expandable-box' : ''?>">
         <form class="formulario" method="POST" enctype="multipart/form-data">
             <label for="title_blog">Article Title</label>
-            <input type="text" name="title_blog" placeholder="Project Title" id="title_blog"
+            <input type="text" name="title_blog" placeholder="Article Title" id="title_blog"
                 value="<?php echo isset($instance->valuesArray['title_blog']) ? s($instance->valuesArray['title_blog']) : '' ?>"/>
 
             <label for="headline_blog">Headline</label>
@@ -114,7 +114,8 @@ use function Model\debugChunk;
             <label for="ttr_blog">Time to Read</label>
             <input type="number" name="ttr_blog" id="ttr_blog" placeholder="Time to read in minutes"
                 value="<?php echo isset($instance->valuesArray['ttr_blog']) ? s($instance->valuesArray['ttr_blog']) : '' ?>"/>
-
+            <input type="hidden" name="date_blog" value="<?php echo $instance->valuesArray["date_blog"] ?>">
+            <input type="hidden" id="likes_blog" name="likes_blog" value=<?php echo $instance->valuesArray["likes_blog"]?>>
             <input type="hidden" name="form_name" value="blog">
 
             <input type="submit" value="<?php echo $pform==='create' ? 'Create Blog Entry' : 'Update Record'?>"/>                        
