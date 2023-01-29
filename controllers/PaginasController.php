@@ -58,7 +58,8 @@ class PaginasController {
         
         $router->render('paginas/article',[  
             'instance'=>$instance,
-            'heart'=>$heart           
+            'heart'=>$heart,
+            'artNumber'=>$artNumber           
         ]);
         //Case user gives like
 

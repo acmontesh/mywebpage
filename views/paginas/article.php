@@ -1,3 +1,13 @@
+<meta name="description" content="PhD student and Drilling automation researcher" />
+<meta property="og:title" content="<?php echo $instance->valuesArray["title_blog"] ?>" />
+<meta property="og:url" content="https://www.abraham-montes.com/<?php echo $artNumber ?>" />
+<meta property="og:image" content="/images/<?php echo $instance->valuesArray["imagen_blog"] ?>" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="<?php echo $instance->valuesArray["title_blog"] ?>">
+<meta name="twitter:image" content="/images/<?php echo $instance->valuesArray["imagen_blog"] ?>">
+<meta name="twitter:domain" content="https://www.abraham-montes.com/<?php echo $artNumber ?>">
+
 <main>
     <h2><?php echo $instance->valuesArray["title_blog"] ?></h2>
     <div class="blog-head">
