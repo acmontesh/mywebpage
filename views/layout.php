@@ -27,14 +27,14 @@ if(!isset($inicio)) {
     <?php } else { ?>
     <meta name="description" content="Abraham's Blog Entry" />
     <meta property="og:title" content="<?php echo $instance->valuesArray["title_blog"] ?>" />
-    <meta property="og:url" content="https://www.abraham-montes.com/articles?an=<?php echo $artNumber ?>" />
+    <meta property="og:url" content="https://www.abraham-montes.com/article?an=<?php echo $artNumber ?>" />
     <meta property="og:image" content="/images/<?php echo $instance->valuesArray["imagen_blog"] ?>" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="<?php echo $instance->valuesArray["title_blog"] ?>">
     <meta name="twitter:description" content="Blog's Entry">
     <meta name="twitter:image" content="/images/<?php echo $instance->valuesArray["imagen_blog"] ?>">
-    <meta name="twitter:domain" content="https://www.abraham-montes.com/articles?an=<?php echo $artNumber ?>">
+    <meta name="twitter:domain" content="https://www.abraham-montes.com/article?an=<?php echo $artNumber ?>">
 
     <?php } ?>
     <link rel="stylesheet" href="../build/css/app.css">
