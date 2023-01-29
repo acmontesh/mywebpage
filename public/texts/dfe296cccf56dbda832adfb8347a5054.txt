@@ -24,7 +24,7 @@ In fact, in the process of building models and deploying them for production, we
 <div class="blog-paragraph">
 <p>
 Technically, it emerges from the decomposition of the expected generalization error. The error that we assess on unseen data can be decomposed as: The model error, the model bias, and the irreducible error. It is easier to interpret these components by seeing the mathematical expression. </p></div>
-<div class="blog-paragraph">
+<div class="equation">
 <p>
 $$
 \underbrace{E\left[(y_o-\hat{f}(x_1^o,...,x_m^o))^2\right]}_{Generalization Error}=\\ \underbrace{\left(E[\hat{f}(x_1^o,...,x_m^o)] - \hat{f}(x_1^o,...,x_m^o)\right)^2}_{Model Bias Squared}+ \\ \underbrace{E\left[\left(\hat{f}(x_1^o,...,x_m^o)- E[\hat{f}(x_1^o,...,x_m^o)\right)^2\right]}_{Model Variance} + \\ \underbrace{\sigma_e^2}_{Irreducible Error}
