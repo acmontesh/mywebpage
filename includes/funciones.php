@@ -233,7 +233,7 @@ function includeInfoMain( $displayType, $results ) {
                                 <picture>
                                     <img src="/images/$imagen" alt="blog_image">
                                 </picture>
-                                <p><span>Summary - </span>$headline</p>
+                                <p><span>About this article - </span>$headline</p>
                             </div>
                         </div>
                         <div class="contenedor-boton">
