@@ -113,9 +113,11 @@ use function Model\debugChunk;
 
             <label for="ttr_blog">Time to Read</label>
             <input type="number" name="ttr_blog" id="ttr_blog" placeholder="Time to read in minutes"
-                value="<?php echo isset($instance->valuesArray['ttr_blog']) ? s($instance->valuesArray['ttr_blog']) : '' ?>"/>
-            <input type="hidden" name="date_blog" value="<?php echo $instance->valuesArray["date_blog"] ?>">
-            <input type="hidden" id="likes_blog" name="likes_blog" value=<?php echo $instance->valuesArray["likes_blog"]?>>
+                value="<?php echo isset($instance->valuesArray['ttr_blog']) ? s($instance->valuesArray['ttr_blog']) : '' ?>">
+            <input type="hidden" name="date_blog" 
+                value="<?php echo isset($instance->valuesArray['date_blog']) ? s($instance->valuesArray['date_blog']) : date("F d, Y") ?>">
+            <input type="hidden" id="likes_blog" name="likes_blog" 
+                value="<?php echo isset($instance->valuesArray['likes_blog']) ? s($instance->valuesArray['likes_blog']) : 1 ?>">
             <input type="hidden" name="form_name" value="blog">
 
             <input type="submit" value="<?php echo $pform==='create' ? 'Create Blog Entry' : 'Update Record'?>"/>                        
