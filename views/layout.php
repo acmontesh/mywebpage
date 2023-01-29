@@ -25,6 +25,7 @@ if(!isset($inicio)) {
 
     <link rel="stylesheet" href="../build/css/app.css">
     <link rel="shortcut icon" href="../images/icon.png">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
                                         
 </head>
 

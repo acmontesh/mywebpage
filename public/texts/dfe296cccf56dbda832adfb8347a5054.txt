@@ -1,0 +1,100 @@
+<h3 class="blog-subtitle">Almighty ML? </h3>
+<div class="blog-paragraph">
+<p>
+As everything in this world, machine learning is subject to rules and constraints, and is certainly not panacea. One of these rules is the one my colleagues back in the CS school called the “Newton’s law of ML” —joking about Newton’s ubiquitousness: The bias-variance trade-off. </p></div>
+<div class="blog-paragraph">
+<p>
+To briefly introduce it, we should agree on the fact that the capability of generating predictions (i.e., producing values of a response feature on unseen data) is the main reason why ML is at the very center of the “industry 4.0” (which refers to an aggregation of technological breakthroughs that drive “smart factories”). </p></div>
+
+<div class="blog-paragraph">
+<p>
+Yes, inductive inference is not everything (and I suggest reading the pigeons example introduced by Shalev-Shwartz and Shai Ben-David to see why), but is what has made of this appealing emerging branch of science so popular. </p></div>
+
+<div class="blog-paragraph">
+<p>
+In fact, in the process of building models and deploying them for production, we calibrate its complexity by assessing its performance on previously unseen data (namely test set, left-out set, out-of-the-bag set, or test folds, depending on the test/validation approach and type of model). So where is the irreducible error?  </p></div>
+
+<div class="marquee-blog">
+    <img src="../build/img/quotemark.svg" alt="comma" class="comma">
+    <h3> As everything in this world, machine learning is subject to rules and constraints, and is certainly not panacea </h3>
+</div>
+
+<h3 class="blog-subtitle">What is the so called “Irreducible error”? </h3>
+
+<div class="blog-paragraph">
+<p>
+Technically, it emerges from the decomposition of the expected generalization error. The error that we assess on unseen data can be decomposed as: The model error, the model bias, and the irreducible error. It is easier to interpret these components by seeing the mathematical expression. </p></div>
+<div class="blog-paragraph">
+<p>
+$$
+\underbrace{E\left[(y_o-\hat{f}(x_1^o,...,x_m^o))^2\right]}_{Generalization Error}=\\ \underbrace{\left(E[\hat{f}(x_1^o,...,x_m^o)] - \hat{f}(x_1^o,...,x_m^o)\right)^2}_{Model Bias Squared}+ \\ \underbrace{E\left[\left(\hat{f}(x_1^o,...,x_m^o)- E[\hat{f}(x_1^o,...,x_m^o)\right)^2\right]}_{Model Variance} + \\ \underbrace{\sigma_e^2}_{Irreducible Error}
+$$
+</p></div>
+<div class="blog-paragraph">
+<p>
+The first component is model variance. It comes from the model being sensitive to the dataset, so a minor change in it, would cause the model performance to strongly vary. In fact, overfit models are instances of excessive model variance. </p></div>
+<div class="blog-paragraph">
+<p>
+After reading about GANs for the first time and no matter what model it is, I like to think of the model bias —the second component— as a judgement of an imitation of a work of art. In the end, we are trying to approximate a function that maps from a feature space to a response. If our imitation is very close to the original (i.e., our model approximates very good that function), then the model has very low bias. If on the other hand our imitation is poor, and anyone could tell it is an imitation (i.e., our model poorly approximates the actual function), then the bias is high.  </p></div>
+
+<div class="blog-paragraph">
+<p>
+One might be tempted to think that ML is here to help us minimize both. Well, not quite. Here, I prefer to use the plot. We can see that the whole ML quest is an optimization problem. We seek a model with certain flexibility, such that it has the best possible performance on unseen data. In terms of the error components we introduced earlier, we mean: We want to have a decent approximation and low variance, but we cannot have both minima at the same time. We have to accept certain amount of bias and variance. And… We also have to live with the black line (the irreducible error). </p></div>
+<div class="imagen-blog">
+<img src='../build/img/biasvariance.webp' class='blog-imagen'>
+</div>
+<div class="marquee-blog">
+    <img src="../build/img/quotemark.svg" alt="comma" class="comma">
+    <h3> We want to have a decent approximation and low variance, but we cannot have both minima at the same time </h3>
+</div>
+
+
+<div class="blog-paragraph">
+<p>
+This tricky part refers to the error coming from missing features, or lack of coverage. We can think of it as the technical limit. Going back to the work of art imitation analogy, suppose you would like to paint an imitation of “the scream”, and you have oil, tempera, and pastel. However, you are not Munch, it is not 1893, you are not in the same mood Munch was, the tools are not exactly the same and so forth. Ergo, even if you are a greater artist than Munch, and have all the tools he used, the imitation will not be exact (i.e., the error will not be 0). </p></div>
+
+<div class="blog-paragraph">
+<p>
+It is noteworthy though that such black constraint is not the same in all the cases. If the painter lacks of pastel, that will be a notorious giveaway of imitation. Similarly, an experienced painter will probably be closer than an amateur. This observation can be taken to the ML context. Using the correct set of features will move the black line down.  </p></div>
+
+<div class="blog-paragraph">
+<p>
+Now, selecting the correct set of features is quite a challenge. In fact, it is the most important challenge as you may notice. There are many papers in the literature that use the “sausage maker” approach. That is, let’s throw everything we have into the machine and it will converge to something. Then they report a stunning 99% accuracy, 100% sensitivity, and no false positives. Be encouraged to suspect something is wrong. Most of them are victims of the curse of dimensionality. </p></div>
+
+<h3 class="blog-subtitle">So, how do we get around it?</h3>
+
+<div class="blog-paragraph">
+<p>
+Managing to avoid this curse is not simple, but if we generate a well-supported workflow, we might give the doubtful readers a strong reason to trust our stunning confusion matrix. This workflow, that as we said seeks to select the correct set of features, is not an irreversible “commit/push”. It is actually, a part of a bigger optimization problem. Many authors part from analyzing principal components, f-scores or simply using prior knowledge (domain expertise) to select a subset of the available features and then forget about it, like checking a box in the CRISP-DM methodology. Do not do this. It is always a good idea to use the subset of features as another “for loop”. Change it and least another couple of times and analyze the results. </p></div>
+
+<div class="blog-paragraph">
+<p>
+An approach I learned recently from “Geostats guy” and find immensely appealing is the use of marginal contributions. This is a borrowed technique from game theory that seeks to calculate the reward that should be given to distinct players based on their marginal contributions in a final achievement. These “reward” values are referred to as “shapley values” in honor to its inventor. </p></div>
+
+<div class="blog-paragraph">
+<p>
+In ML, we apply this concept by calculating marginal contributions of each feature to a given prediction. This is quite a useful thing! We can know, from the set of features, which of them were the most relevant for the prediction. Let us put this in a drilling example. Suppose we want to predict the ROP for a given combination of parameters while drilling certain formation. Well, we can train a sophisticated neural net to do that and then, understand what the net used from the inputs we gave it to give us an ROP. Here is an example from a well from Utahforge: </p></div>
+<div class="imagen-blog">
+<img src='../build/img/shapleys.webp' class='blog-imagen'>
+</div>
+<div class="blog-paragraph">
+<p>
+The shapley values are telling us that the rotation speed does not seem to be contributing much to the ROP prediction. Considering the granite and diorites drilled at UtahForge, this seems to align perfectly with the empirical rule old drillers mention all the time: Butter-like rocks, you may want to drill them with high RPM, low WOB; Pyrite-like rocks, you may want to do low RPM and high WOB. </p></div>
+
+<div class="marquee-blog">
+    <img src="../build/img/quotemark.svg" alt="comma" class="comma">
+    <h3> We can know, from the set of features, which of them were the most relevant for the prediction</h3>
+</div>
+<div class="blog-paragraph">
+<p>
+Furthermore, it makes sense that rock strength (which is heavily correlated with depth) and weight on bit (WOB) contribute significantly to ROP. Now temperature is quite an interesting thing to analyze… But, without sailing to different waters, we can see how valuable getting marginal contributions is </p></div>
+
+
+<div class="blog-paragraph">
+<p>
+You are probably thinking that this is a late conclusion when it comes to reducing the “irreducible error”. It seems like we first had to commit to a model, build it, and then predict the response before learning about the marginal contributions. Well… Yes. But in the upcoming blog publication I will explain how to address this “anti-free-lunch” approach, and why I call it that. </p></div>
+
+<p>
+Thank you for reading!
+
+I appreciate your feedback! Please feel free to contact me and let me know if you agree or disagree with me</p>
