@@ -13,5 +13,12 @@ class Contributor extends MWElement {
         
     }   
 
+    // public function getContName($contNumber) {
+    //     $query = "SELECT * FROM blog_contributors WHERE id=" . $contNumber;
+    //     $res = self::$db->query($query);
+    //     $res = $res->fetchAssoc();
+    //     return $res['name_contributor'];
+    // }
+
     
 }

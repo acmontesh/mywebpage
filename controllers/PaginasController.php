@@ -9,9 +9,10 @@ use Model\Award;
 use Model\Quote;
 use Model\Degree;
 use Model\Project;
+use Model\Contributor;
 use Model\Publication;
-use function Model\debugChunk;
 
+use function Model\debugChunk;
 use PHPMailer\PHPMailer\PHPMailer;
 use function Model\getArticleNumber;
 
@@ -48,7 +49,10 @@ class PaginasController {
         
         $artNumber = getArticleNumber();
         $instance = Blog::findRecord($artNumber);
-        $heart = ""; 
+        $heart = "";
+        $contributor = Contributor::findRecord($instance->valuesArray['coauthors_blog']);
+        $contrib_name = $contributor->valuesArray['name_contributor'];
+
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $instance = $instance->syncUpdate($_POST);
             $errorMessages = $instance->validate_commit("update", null, $artNumber, "likes");            
@@ -59,7 +63,8 @@ class PaginasController {
         $router->render('paginas/article',[  
             'instance'=>$instance,
             'heart'=>$heart,
-            'artNumber'=>$artNumber           
+            'artNumber'=>$artNumber,
+            'contrib_name'=>$contrib_name         
         ], true);
         //Case user gives like
 

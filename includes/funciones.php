@@ -207,6 +207,7 @@ function includeInfoMain( $displayType, $results ) {
                 $ttr = $bg->valuesArray["ttr_blog"];
                 $tempRes = Contributor::findRecord($coauthor);
                 $coauthor = $tempRes->valuesArray['name_contributor'];
+                $year = $bg->valuesArray["date_blog"];
                 if ($coauthor!=="no") {
                     $coauthor = " and " . $coauthor;
                 } else {
@@ -219,7 +220,7 @@ function includeInfoMain( $displayType, $results ) {
                         <div class="bar-blog"></div>
                         <div class="entry"> 
                             <div class="head-espaciado">                           
-                                <p class="title-entry"><span>Author(s): </span> Abraham Montes $coauthor | 2022</p>
+                                <p class="title-entry"><span>Author(s): </span> Abraham Montes $coauthor | $year</p>
                                 <p class="title-entry"><span>Time to read : </span> $ttr min</p>
                                 <div class="likes-count full">
                                     <div id="likes-count-child">

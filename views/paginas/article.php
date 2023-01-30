@@ -3,7 +3,7 @@
     <div class="blog-head">
         <img src="/images/<?php echo $instance->valuesArray["imagen_blog"] ?>">
         <div class="blog-info">
-            <p><span>Author: </span>Abraham Montes</p>
+            <p><span>Author: </span>Abraham Montes<?php echo $contrib_name==="no" ? "" : " and " . $contrib_name ?></p>
             <p><span>Date: </span><?php echo $instance->valuesArray["date_blog"] ?></p>
             <p><span>Time to Read: </span><?php echo $instance->valuesArray["ttr_blog"] ?> min</p>
             <form id="formArticle" method="POST" enctype="multipart/form-data">
